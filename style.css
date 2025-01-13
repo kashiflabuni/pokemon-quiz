@@ -1,0 +1,192 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #a1c4fd 100%);
+    color: #333;
+    padding: 10px;
+    /* Add padding for small devices */
+    overflow-x: hidden;
+}
+
+/* Container Styling */
+.container {
+    width: 100%;
+    max-width: 500px;
+    background-color: #fefefe;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* Main Section */
+.main {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 5px;
+}
+
+.main:hover {
+    box-shadow: 0 10px 20px rgba(59, 55, 55, 0.7);
+}
+
+/* Heading */
+h1 {
+    font-size: 2rem;
+    color: #3e3e99;
+    margin-bottom: 15px;
+    font-family: "Frijole", serif;
+}
+
+/* Pokémon Image */
+#pokemonImage {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    /* Center the image */
+}
+
+/* Options Container */
+.options-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+/* Button Styling */
+button {
+    padding: 10px 15px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    background-color: #607d8b;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    flex: 1 1 calc(50% - 10px);
+    /* Adjust for smaller gaps */
+    max-width: 45%;
+    /* Ensure buttons stay proportional */
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #4caf50;
+    transform: scale(1.05);
+}
+
+/* Points Section */
+#points {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #444;
+}
+
+/* Loading Icon */
+#loading img {
+    width: 40px;
+    height: 40px;
+    margin-top: 20px;
+}
+
+/* Media Queries for Larger Devices */
+@media (min-width: 768px) {
+    .container {
+        max-width: 600px;
+    }
+
+    button {
+        font-size: 1.2rem;
+    }
+}
+
+/* Controls Section */
+.controls {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+/* Control Buttons Styling */
+.control-btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    background-color: #3f51b5;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.3s ease;
+    flex: 1;
+}
+
+.control-btn:hover {
+    background-color: #283593;
+    transform: scale(1.05);
+}
+
+/* Responsive Adjustments for Small Screens */
+@media (max-width: 480px) {
+    .controls {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .control-btn {
+        width: 100%;
+    }
+}
+/* Timer Section */
+
+/* Timer Circle */
+.timer-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+.timer-circle {
+    transform: rotate(-90deg); /* Start from top */
+}
+
+.circle-background {
+    fill: none;
+    stroke: #499f0c;
+    stroke-width: 10;
+}
+
+.circle-progress {
+    fill: none;
+    stroke: #e9f5ee;
+    stroke-width: 10;
+    stroke-dasharray: 344; /* Circumference of the circle */
+    stroke-dashoffset: 344;
+    transition: stroke-dashoffset 1s linear(0.5s);
+}
+
+#time {
+    position: absolute;
+    font-size: 1.5rem;
+    color: #333;
+    font-weight: bold;
+}
