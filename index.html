@@ -1,13 +1,48 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Who's that Pokémon?</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Frijole&family=Nothing+You+Could+Do&family=Oleo+Script:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="this">Who's that Pokémon?</h1>
+        <div class="main">
+            <img src="favicon.png" id="pokemonImage" alt="Pokémon Image">
+            <div id="options" class="options-container">
+                <button class="opt" aria-label="Option 1">Option 1</button>
+                <button class="opt" aria-label="Option 2">Option 2</button>
+                <button class="opt" aria-label="Option 3">Option 3</button>
+                <button class="opt" aria-label="Option 4">Option 4</button>
+            </div>
+            <h4 id="points">
+                Points: <span id="pointsEarn">0</span>/<span id="totalCount">0</span>
+            </h4>
+            <div class="timer-container">
+                <svg class="timer-circle" width="120" height="120" viewBox="0 0 120 120">
+                    <circle cx="60" cy="60" r="55" class="circle-background" />
+                    <circle cx="60" cy="60" r="55" class="circle-progress" />
+                </svg>
+                <div id="time">01:00</div>
+            </div>
+            <div id="loading">
+                <!-- <img src="loading_icon.gif" alt="Loading..."> -->
+            </div>
+        </div>
+        <!-- Control Buttons Section -->
+        <div class="controls">
+            <button class="control-btn" id="restart">Restart</button>
+            <button class="control-btn" id="pause">Pause</button>
+            <button class="control-btn" id="end">End</button>
+        </div>
+    </div>
+</body>
+
 </html>
