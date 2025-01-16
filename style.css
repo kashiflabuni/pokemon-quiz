@@ -1,0 +1,192 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #6a11cb, #2575fc); /* Vibrant blue-purple gradient */
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: auto; /* Allow scrolling if content overflows */
+}
+
+/* Game Container */
+.game-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100vh;
+    min-width: 100vw;
+    padding: 20px;
+}
+
+/* Header */
+.game-header {
+    background: linear-gradient(135deg, #ff9a9e, #fecfef); /* Warm pink gradient */
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+    border-radius: 5px;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.game-header h1 {
+    font-family: 'Fredoka One', cursive;
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Main Content */
+.game-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    flex: 1;
+    width: 100%;
+}
+
+/* Pokémon Display */
+.pokemon-display {
+    width: 300px;
+    height: 300px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 6px solid #ffd700;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 0 15px #ffd700;
+    animation: pulse 2s infinite;
+}
+
+.pokemon-display img {
+    width: 70%;
+    height: auto;
+    animation: bounce 1.5s infinite;
+    transition: transform 0.3s ease-in-out;
+}
+
+.pokemon-display img:hover {
+    transform: scale(1.1);
+}
+
+@keyframes pulse {
+    0%, 100% {
+        box-shadow: 0 15px 30px rgba(255, 255, 255, 0.3), 0 0 20px #ffd700;
+    }
+    50% {
+        box-shadow: 0 20px 35px rgba(255, 255, 255, 0.4), 0 0 25px #ffd700;
+    }
+}
+
+/* Options Section */
+.options-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    width: 100%;
+}
+
+.option-btn {
+    background: linear-gradient(135deg, #42e695, #3bb2b8); /* Green-blue gradient */
+    color: #fff;
+    border: none;
+    padding: 15px 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.option-btn:hover {
+    background: linear-gradient(135deg, #3bb2b8, #42e695);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.option-btn:active {
+    transform: scale(0.95);
+}
+
+/* Footer */
+.game-footer {
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.scoreboard p {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.controls {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.control-btn {
+    background: linear-gradient(135deg, #ff5722, #ff7043); /* Orange gradient */
+    color: #fff;
+    border: none;
+    padding: 12px 18px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(255, 87, 34, 0.2);
+    transition: all 0.3s ease;
+    flex: 1;
+}
+
+.control-btn:hover {
+    background: linear-gradient(135deg, #ff7043, #ff8965);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(255, 87, 34, 0.3);
+}
+
+.control-btn:active {
+    transform: scale(0.95);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .game-header h1 {
+        font-size: 2.5rem;
+    }
+
+    .option-btn {
+        font-size: 1rem;
+        padding: 10px;
+    }
+}
